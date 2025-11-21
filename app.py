@@ -188,7 +188,7 @@ if st.button("Generate Story", key="generate"):
         st.markdown(story)
 
 # ----------------------------------
-# Section 3 — ChatGPT-style Refinement
+# Section 3 — Refinement
 # ----------------------------------
 if "story" in st.session_state and st.session_state.story:
 

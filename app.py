@@ -5,6 +5,9 @@ from utils.prompts import SYSTEM_PROMPT
 from dotenv import load_dotenv
 import os
 
+if "raw_text" not in st.session_state:
+    st.session_state.raw_text = ""
+
 # ----------------------------------
 # Load environment + OpenAI client
 # ----------------------------------
@@ -163,6 +166,7 @@ Deadline: end of Q1."""
         if st.button("Stakeholder Notes", use_container_width=True):
             st.session_state.raw_text = example_3
 
+    # Text area ALWAYS reads from / writes to session_state
     st.session_state.raw_text = st.text_area(
         "Paste your Slack messages, meeting notes, transcripts, or email threads:",
         height=280,
@@ -170,13 +174,8 @@ Deadline: end of Q1."""
         value=st.session_state.raw_text
     )
 
-    # --- Text Area ---
-    raw_text = st.text_area(
-        "Paste your Slack messages, meeting notes, transcripts, or email threads:",
-        height=280,
-        placeholder="Paste anything messy here...",
-        value=raw_text
-    )
+    # Set raw_text for downstream steps
+    raw_text = st.session_state.raw_text
 
 elif input_type == "Upload Screenshot":
     st.markdown("### Upload a screenshot")

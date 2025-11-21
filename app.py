@@ -142,10 +142,10 @@ if input_type == "Paste Text":
 Users say the OTP email arrives late.
 Marketing wants referral tracking added before the next release."""
 
-    example_2 = """Maria: Dashboard not refreshing unless users reload manually.
-David: suspects a caching issue.
-John: says API latency is fine.
-Maria: Need clear ownership and fix for next sprint."""
+    example_2 = """Maria: Dashboard is not refreshing unless users reload manually.
+David: May be it's a caching issue.
+John: But API latency is fine.
+Maria: We need a clear ownership and fix it for the next sprint."""
 
     example_3 = """Stakeholders want a 'saved filters' option on the Reports page.
 Should support saving up to 5 presets.

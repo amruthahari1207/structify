@@ -27,7 +27,7 @@ st.set_page_config(
 with st.sidebar:
     st.markdown("""
         <div style="padding-top: 10px;">
-            <h1 style="font-size: 28px; margin-bottom: 4px;"> PM Assist</h1>
+            <h1 style="font-size: 28px; margin-bottom: 4px;"> Structify </h1>
             <p style="font-size: 16px; font-weight: 500; color:#444;">
                 Your AI-powered Product Story Generator turning messy information into structured, actionable product work
             </p>

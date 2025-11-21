@@ -76,7 +76,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.markdown("""
-        <h3 style="font-size: 20px;">👋 Hello!</h3>
+        <h3 style="font-size: 20px;">Hello!</h3>
         <p style="font-size: 15px; line-height: 1.55; color: #333; margin-top: -5px;">
             Got scattered notes? Half-baked meeting minutes?  
             A screenshot you took at 9:47 PM so you “don’t forget"?  

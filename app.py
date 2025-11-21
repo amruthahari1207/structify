@@ -132,10 +132,45 @@ input_type = st.selectbox("Choose Input Type:", ["Paste Text", "Upload Screensho
 raw_text = ""
 
 if input_type == "Paste Text":
+
+    st.markdown("### Try one of these messy examples 👇")
+
+    # Example text content
+    example_1 = """We need to fix the login bug that only happens on Safari.
+Users say the OTP email arrives late.
+Marketing wants referral tracking added before the next release."""
+
+    example_2 = """Dashboard not refreshing unless user reloads manually.
+FE suspects a caching issue.
+BE says API latency is fine.
+Need clear ownership and fix for the next sprint."""
+
+    example_3 = """Stakeholders want a 'saved filters' option on the Reports page.
+Should support saving up to 5 presets.
+Analytics team says this will reduce repetitive queries.
+Deadline: end of Q1."""
+
+    # --- 3 Columns for Example Cards ---
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        if st.button("📝 Meeting Chaos", use_container_width=True):
+            raw_text = example_1
+
+    with col2:
+        if st.button("💬 Slack Thread", use_container_width=True):
+            raw_text = example_2
+
+    with col3:
+        if st.button("📊 Stakeholder Notes", use_container_width=True):
+            raw_text = example_3
+
+    # --- Text Area ---
     raw_text = st.text_area(
         "Paste your Slack messages, meeting notes, transcripts, or email threads:",
         height=280,
-        placeholder="Paste anything messy here..."
+        placeholder="Paste anything messy here...",
+        value=raw_text
     )
 
 elif input_type == "Upload Screenshot":

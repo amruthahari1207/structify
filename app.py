@@ -133,7 +133,7 @@ raw_text = ""
 
 if input_type == "Paste Text":
 
-    st.markdown("### Try one of these messy examples 👇")
+    st.markdown("### Try one of these messy examples?")
 
     # Example text content
     example_1 = """We need to fix the login bug that only happens on Safari.
@@ -154,15 +154,15 @@ Deadline: end of Q1."""
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        if st.button("📝 Meeting Chaos", use_container_width=True):
+        if st.button("Meeting Chaos", use_container_width=True):
             raw_text = example_1
 
     with col2:
-        if st.button("💬 Slack Thread", use_container_width=True):
+        if st.button("Slack Thread", use_container_width=True):
             raw_text = example_2
 
     with col3:
-        if st.button("📊 Stakeholder Notes", use_container_width=True):
+        if st.button("Stakeholder Notes", use_container_width=True):
             raw_text = example_3
 
     # --- Text Area ---

@@ -26,26 +26,36 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* Keep text bright in the SIDEBAR only */
-section[data-testid="stSidebar"] * {
-    color: #FFFFFF !important;
-}
-
-/* Sidebar background stays dark */
-section[data-testid="stSidebar"] {
-    background-color: #0E1117 !important;
-}
-
-/* Main content area stays LIGHT */
-div.block-container {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-}
-
-/* Fix dim text in main content */
+/* Make all markdown text readable in dark mode */
 [data-testid="stMarkdown"] p,
-[data-testid="stMarkdown"] li {
-    color: #000000 !important;
+[data-testid="stMarkdown"] li,
+[data-testid="stMarkdown"] span {
+    color: inherit !important;
+}
+
+/* Fix sidebar dimming */
+section[data-testid="stSidebar"] * {
+    color: inherit !important;
+}
+
+/* Ensure list items don't fade */
+li {
+    opacity: 1 !important;
+}
+
+/* Fix label text in dark mode */
+label, .stTextInput label {
+    color: inherit !important;
+}
+
+/* Ensure chat input stays readable */
+.stChatInputContainer * {
+    color: inherit !important;
+}
+
+/* Buttons remain readable */
+.stButton button {
+    color: inherit !important;
 }
 
 </style>

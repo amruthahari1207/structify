@@ -20,6 +20,42 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+# ----------------------------------
+# Consistent colors 
+# ----------------------------------
+st.markdown("""
+<style>
+/* Always use your custom colors — prevents dark-mode dimming */
+html, body, div, p, span, li, input, label, ul {
+    color: #FFFFFF !important;
+}
+
+/* Sidebar background override */
+section[data-testid="stSidebar"] {
+    background-color: #0E1117 !important;
+}
+
+/* Main page background override */
+div.block-container {
+    background-color: #0E1117 !important;
+}
+
+/* Remove Streamlit's built-in 'secondary text' dimming */
+[data-testid="stMarkdown"] p {
+    color: #FFFFFF !important;
+}
+
+/* Force list items to stay bright */
+li {
+    color: #FFFFFF !important;
+}
+
+/* Titles and headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ----------------------------------
 # Sidebar

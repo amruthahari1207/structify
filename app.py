@@ -25,35 +25,29 @@ st.set_page_config(
 # ----------------------------------
 st.markdown("""
 <style>
-/* Always use your custom colors — prevents dark-mode dimming */
-html, body, div, p, span, li, input, label, ul {
+
+/* Keep text bright in the SIDEBAR only */
+section[data-testid="stSidebar"] * {
     color: #FFFFFF !important;
 }
 
-/* Sidebar background override */
+/* Sidebar background stays dark */
 section[data-testid="stSidebar"] {
     background-color: #0E1117 !important;
 }
 
-/* Main page background override */
+/* Main content area stays LIGHT */
 div.block-container {
-    background-color: #0E1117 !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
 }
 
-/* Remove Streamlit's built-in 'secondary text' dimming */
-[data-testid="stMarkdown"] p {
-    color: #FFFFFF !important;
+/* Fix dim text in main content */
+[data-testid="stMarkdown"] p,
+[data-testid="stMarkdown"] li {
+    color: #000000 !important;
 }
 
-/* Force list items to stay bright */
-li {
-    color: #FFFFFF !important;
-}
-
-/* Titles and headers */
-h1, h2, h3, h4, h5, h6 {
-    color: #FFFFFF !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
